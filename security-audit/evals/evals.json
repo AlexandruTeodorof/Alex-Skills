@@ -1,0 +1,23 @@
+{
+  "skill_name": "security-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're about to push our Next.js app to production next week. Can you do a full security audit? The codebase is right here — focus on anything that could be a real problem before launch.",
+      "expected_output": "Runs OWASP Top 10 2025 analysis on the current project, produces audit/YYYY-MM-DD/security-audit-report.md with Executive Summary, severity-ranked findings (Critical/High/Medium/Low), affected file:line references, code evidence, and suggested fixes. Should detect at least common Next.js issues like missing server-action auth guards, exposed secrets, missing security headers.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you review our authentication code for any security issues? I'm particularly worried about our login endpoint and session handling.",
+      "expected_output": "Audits authentication-related code against A07:2025 (Authentication Failures) and A01:2025 (Broken Access Control) at minimum. Finds issues like missing rate limiting, weak session management, or JWT misconfiguration. Stores report in audit/ directory.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to check our API for vulnerabilities before we open it to external developers. Can you do a security check?",
+      "expected_output": "Full OWASP Top 10 2025 audit of the project's API surface. Should cover: injection (SQL/NoSQL/command), access control, authentication, logging, input validation. Report in audit/YYYY-MM-DD/ with prioritized findings.",
+      "files": []
+    }
+  ]
+}
